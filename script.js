@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Sortable for the movie wrapper
     const movieWrapper = document.querySelector('.grid-wrapper');
+
     new Sortable(movieWrapper, {
         group: {
             name: 'movie-list',
             // pull:'clone', //კლონირების საშუალება
-            //put:false //უკან ვეღარ დავაბრუნებთ ელემენტს
+            // put:false //უკან ვეღარ დავაბრუნებთ ელემენტს
         },
         animation: 150,
         onStart(evt) {
@@ -22,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
         onEnd(evt) {
             console.log('Sorting ended:', evt);
         },
-        // swap:true, //საშუალებას გვაძლევს ადგილები გავუცვალოთ ელემენტებს
-        // swapClass:"highlight", //საშუალებას გვაძლევს დავინახოდ უშუალოდ რომელ ელემენტს გაუცვლის ადგილს ჩვენი ელემენტი
-        // ghostClass:"ghost" // საშუალებას გვაძლევს ვხედავდეთ არჩეულ ელემენტს სანამ არ დავამთავრებთ drag & drop -ს
+        swap:true, //საშუალებას გვაძლევს ადგილები გავუცვალოთ ელემენტებს
+        swapClass:"highlight", //საშუალებას გვაძლევს დავინახოდ უშუალოდ რომელ ელემენტს გაუცვლის ადგილს ჩვენი ელემენტი
+        ghostClass:"ghost" // საშუალებას გვაძლევს ვხედავდეთ არჩეულ ელემენტს სანამ არ დავამთავრებთ drag & drop -ს
     });
 
     //S tier
